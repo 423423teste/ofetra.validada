@@ -1,249 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <script
-        src="https://cdn.jsdelivr.net/gh/xTracky/static@latest/utm-handler.js"
-        data-token="44c92066-6ab7-4990-bf19-1a0149268ed6"
-    ></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erro no Pagamento - Privacy VIP</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        .logo-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 32px;
-        }
-        
-        .logo-container img {
-            max-width: 280px;
-            width: 100%;
-            height: auto;
-        }
-        
-        .error-icon-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 24px;
-        }
-        
-        .error-icon {
-            width: 80px;
-            height: 80px;
-            background: #fff0f0;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ff6b1a;
-        }
-        
-        .error-icon svg {
-            width: 48px;
-            height: 48px;
-        }
-        
-        .highlight-box {
-            background: linear-gradient(135deg, #ff6b1a 0%, #ff8c42 100%);
-            padding: 24px;
-            border-radius: 16px;
-            margin-bottom: 32px;
-            text-align: center;
-        }
-        
-        .highlight-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 8px;
-        }
-        
-        .highlight-subtitle {
-            font-size: 0.9375rem;
-            color: rgba(255, 255, 255, 0.95);
-            font-weight: 500;
-        }
-        
-        .refund-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #e8f8f0;
-            color: #00a854;
-            padding: 8px 16px;
-            border-radius: 24px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 24px;
-        }
-        
-        .refund-badge svg {
-            width: 20px;
-            height: 20px;
-        }
-        
-        .steps-list {
-            background: #fafafa;
-            border: 1px solid #f0f0f0;
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 32px;
-        }
-        
-        .step-item {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 16px;
-        }
-        
-        .step-item:last-child {
-            margin-bottom: 0;
-        }
-        
-        .step-number {
-            flex-shrink: 0;
-            width: 32px;
-            height: 32px;
-            background: linear-gradient(135deg, #ff6b1a 0%, #ff8c42 100%);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 0.875rem;
-        }
-        
-        .step-content {
-            flex: 1;
-            padding-top: 4px;
-        }
-        
-        .step-title {
-            font-size: 0.9375rem;
-            font-weight: 600;
-            color: #1a1a1a;
-            margin-bottom: 4px;
-        }
-        
-        .step-description {
-            font-size: 0.875rem;
-            color: #666;
-            line-height: 1.5;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f5f5">
+  <title>Status do pagamento</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Caminho relativo correto para a pasta css -->
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <div class="page-wrapper">
-        <div class="container">
-            <div class="main-card">
-                <div class="card-content">
-                    <div class="logo-container">
-                        <img src="images/logo-privacy.png" alt="Privacy Logo">
-                    </div>
-
-                    <div class="error-icon-container">
-                        <div class="error-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <line x1="15" y1="9" x2="9" y2="15"></line>
-                                <line x1="9" y1="9" x2="15" y2="15"></line>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <h1 class="main-title">Pagamento Recusado</h1>
-                    <p class="main-subtitle">Você precisa pagar a Taxa Privacy de verificação para continuar</p>
-                    
-                    <div style="text-align: center;">
-                        <div class="refund-badge">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            100% Reembolsável
-                        </div>
-                    </div>
-
-                    <div class="highlight-box">
-                        <h3 class="highlight-title">Taxa Privacy R$ 10,90 | 100% Reembolsável</h3>
-                        <p class="highlight-subtitle">Valor será reembolsado em até 5 minutos após verificação</p>
-                    </div>
-
-                    <div class="info-box">
-                        <div class="info-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <line x1="12" y1="16" x2="12" y2="12"></line>
-                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                            </svg>
-                        </div>
-                        <div class="info-content">
-                            <h3 class="info-title">Por que preciso pagar esta taxa?</h3>
-                            <p class="info-text">Seu pagamento foi recusado. Para continuar, é necessário realizar a <strong>Taxa Privacy de R$ 10,90</strong> para verificação. Esta taxa é 100% reembolsável e será devolvida em até 5 minutos após confirmarmos sua identidade.</p>
-                        </div>
-                    </div>
-
-                    <div class="steps-list">
-                        <div class="step-item">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <div class="step-title">Pague a Taxa Privacy</div>
-                                <div class="step-description">Realize o pagamento da taxa de verificação de forma rápida e segura</div>
-                            </div>
-                        </div>
-                        <div class="step-item">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <div class="step-title">Acesso Liberado</div>
-                                <div class="step-description">Após verificação, seu acesso ao Privacy - Eduarda é liberado automaticamente</div>
-                            </div>
-                        </div>
-                        <div class="step-item">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <div class="step-title">Reembolso Instantâneo</div>
-                                <div class="step-description">Em até 5 minutos, o valor é reembolsado automaticamente em sua conta</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-section">
-                        <div class="faq-item">
-                            <h4 class="faq-question">Quanto tempo leva para receber o reembolso?</h4>
-                            <p class="faq-answer">O reembolso de R$ 10,90 é processado automaticamente em até 5 minutos após a verificação ser concluída. Você receberá uma notificação quando o valor estiver disponível.</p>
-                        </div>
-                    </div>
-
-                    <a href="https://ambienteseguro.org.ua/c/8b262930b4" id="btn-checkout" class="payment-button">
-                        <span class="button-text">Pagar Taxa Privacy Agora</span>
-                        <svg class="button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a>
-                </div>
-            </div>
+  <main class="page-wrapper">
+    <section class="main-card" aria-labelledby="page-title">
+      <div class="card-content">
+        <div class="error-icon-container" aria-hidden="true">
+          <div class="error-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="15" y1="9" x2="9" y2="15"></line>
+              <line x1="9" y1="9" x2="15" y2="15"></line>
+            </svg>
+          </div>
         </div>
-    </div>
 
-    <script src="js/script.js"></script>
-    <script>
-        // Repassa parâmetros da URL atual (UTMs) para o link de pagamento
-        document.addEventListener("DOMContentLoaded", function () {
-            const params = window.location.search;
-            if (params) {
-                const btn = document.getElementById("btn-checkout");
-                const url = new URL(btn.href);
-                const currentParams = new URLSearchParams(params);
-                currentParams.forEach((value, key) => {
-                    url.searchParams.set(key, value);
-                });
-                btn.href = url.toString();
-            }
-        });
-    </script>
+        <h1 class="main-title" id="page-title">Pagamento não concluído</h1>
+
+        <p class="main-subtitle">
+          Não foi possível confirmar seu pagamento. Confira o status da
+          transação com o estabelecimento responsável pela compra.
+        </p>
+
+        <section class="info-box" aria-labelledby="info-title">
+          <div class="info-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+          </div>
+
+          <div class="info-content">
+            <h2 class="info-title" id="info-title">O que aconteceu?</h2>
+            <p class="info-text">
+              A transação ainda não foi confirmada. Antes de tentar novamente,
+              consulte o estabelecimento ou o suporte oficial do meio de
+              pagamento para evitar uma cobrança duplicada.
+            </p>
+          </div>
+        </section>
+
+        <section class="faq-section" aria-labelledby="help-title">
+          <div class="faq-item">
+            <h2 class="faq-question" id="help-title">Precisa de ajuda?</h2>
+            <p class="faq-answer">
+              Entre em contato com o estabelecimento responsável pela compra
+              e informe que o pagamento aparece como não concluído.
+            </p>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
