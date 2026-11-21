@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #ffffff;
+  color: #1a1a1a;
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.header-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.logo-container {
+  display: inline-block;
+  background: white;
+  padding: 24px 48px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(255, 107, 26, 0.12);
+}
+
+.logo {
+  max-width: 280px;
+  height: auto;
+  display: block;
+}
+
+/* Main Card */
+.main-card {
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 8px 40px rgba(255, 107, 26, 0.15);
+  overflow: hidden;
+  border: 1px solid rgba(255, 107, 26, 0.1);
+}
+
+.card-content {
+  padding: 48px 40px;
+}
+
+/* Typography */
+.main-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.main-subtitle {
+  font-size: 1.125rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+/* Price Section */
+.price-section {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 32px;
+  background: linear-gradient(135deg, #ff6b1a 0%, #ff8c42 100%);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(255, 107, 26, 0.25);
+}
+
+.price-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.currency {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-top: 8px;
+}
+
+.price-amount {
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.price-description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
+}
+
+/* Info Box */
+.info-box {
+  display: flex;
+  gap: 20px;
+  padding: 28px;
+  background: #fff8f4;
+  border-radius: 16px;
+  border-left: 4px solid #ff6b1a;
+  margin-bottom: 32px;
+}
+
+.info-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  color: #ff6b1a;
+}
+
+.info-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.info-content {
+  flex: 1;
+}
+
+.info-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.info-text {
+  font-size: 0.9375rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* FAQ Section */
+.faq-section {
+  margin-bottom: 40px;
+}
+
+.faq-item {
+  padding: 24px;
+  background: #fafafa;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+}
+
+.faq-question {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.faq-answer {
+  font-size: 0.9375rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Payment Button */
+.payment-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 20px 32px;
+  background: linear-gradient(135deg, #ff6b1a 0%, #ff8c42 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 16px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(255, 107, 26, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+.payment-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(255, 107, 26, 0.4);
+}
+
+.payment-button:active {
+  transform: translateY(0);
+}
+
+.button-text {
+  font-size: 1.125rem;
+}
+
+.button-arrow {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.payment-button:hover .button-arrow {
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-wrapper {
+    padding: 24px 16px;
+  }
+
+  .card-content {
+    padding: 32px 24px;
+  }
+
+  .main-title {
+    font-size: 1.625rem;
+  }
+
+  .main-subtitle {
+    font-size: 1rem;
+  }
+
+  .price-amount {
+    font-size: 3.5rem;
+  }
+
+  .currency {
+    font-size: 1.5rem;
+  }
+
+  .logo-container {
+    padding: 20px 32px;
+  }
+
+  .logo {
+    max-width: 220px;
+  }
+
+  .info-box {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .payment-button {
+    font-size: 1rem;
+    padding: 18px 28px;
+  }
+
+  .button-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .price-amount {
+    font-size: 3rem;
+  }
+
+  .price-section {
+    padding: 24px 20px;
+  }
+}

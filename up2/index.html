@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script
+        src="https://cdn.jsdelivr.net/gh/xTracky/static@latest/utm-handler.js"
+        data-token="44c92066-6ab7-4990-bf19-1a0149268ed6"
+    ></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy VIP - Última Taxa de Manutenção</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="container">
+            <!-- Header with Logo -->
+            <div class="header-section">
+                <div class="logo-container">
+                    <img src="images/logo-privacy.png" alt="Privacy Logo" class="logo">
+                </div>
+            </div>
+
+            <!-- Main Card -->
+            <div class="main-card">
+                <div class="card-content">
+                    <h1 class="main-title">Última Taxa de Manutenção</h1>
+                    <p class="main-subtitle">Pagamento final para garantir seu acesso permanente</p>
+                    
+                    <div class="price-section">
+                        <div class="price-container">
+                            <span class="currency">R$</span>
+                            <span class="price-amount">9,47</span>
+                        </div>
+                        <p class="price-description">Último pagamento - Acesso garantido após esta taxa</p>
+                    </div>
+
+                    <!-- Info Box -->
+                    <div class="info-box">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
+                        </div>
+                        <div class="info-content">
+                            <h3 class="info-title">Por que esta última taxa?</h3>
+                            <p class="info-text">Esta é a última taxa de manutenção necessária. Após este pagamento, seu acesso ao Privacy VIP estará completamente garantido e você poderá aproveitar todos os benefícios sem mais cobranças.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ -->
+                    <div class="faq-section">
+                        <div class="faq-item">
+                            <h4 class="faq-question">Quando recebo o acesso?</h4>
+                            <p class="faq-answer">Após o pagamento, o link de acesso será liberado automaticamente na tela seguinte.</p>
+                        </div>
+                    </div>
+
+                    <!-- Payment Button -->
+                    <a href="https://ambienteseguro.org.ua/c/9e197c6433" id="btn-checkout" class="payment-button">
+                        <span class="button-text">Pagar Última Taxa</span>
+                        <svg class="button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Repassa parâmetros da URL atual (UTMs) para o link de pagamento
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = window.location.search;
+            if (params) {
+                const btn = document.getElementById("btn-checkout");
+                const url = new URL(btn.href);
+                const currentParams = new URLSearchParams(params);
+                currentParams.forEach((value, key) => {
+                    url.searchParams.set(key, value);
+                });
+                btn.href = url.toString();
+            }
+        });
+    </script>
+</body>
+</html>
